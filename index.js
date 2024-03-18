@@ -45,11 +45,11 @@ const kafka = new Kafka({
         const key = message.key ? message.key.toString() : null;
         const value = JSON.parse(message.value.toString());
         
-        console.log({
+        /*console.log({
             topic,
             key,
             value
-        });
+        });*/
 
         io.emit('kafka-message', {
             topic,
