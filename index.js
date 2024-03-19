@@ -30,14 +30,14 @@ const kafka = new Kafka({
     ssl:true,
   });
 
-  const consumer = kafka.consumer({ groupId: 'test-group' });
+  const consumer = kafka.consumer({ groupId: 'test-group-1' });
 
   const run = async () => {
     await consumer.connect();
     await consumer.subscribe({ topic: 'mytopic', fromBeginning: true });
     await consumer.subscribe({ topic: 'ProductViewedCountsTopic', fromBeginning: true });
     await consumer.subscribe({ topic: 'ProductPurchasedCountsTopic', fromBeginning: true });
-    await consumer.subscribe({ topic: 'ProductFavoritedCountsTopic', fromBeginning: true });
+    //await consumer.subscribe({ topic: 'ProductFavoritedCountsTopic', fromBeginning: true });
     
   
     await consumer.run({
