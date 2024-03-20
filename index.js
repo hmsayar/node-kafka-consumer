@@ -37,7 +37,7 @@ const kafka = new Kafka({
     await consumer.subscribe({ topic: 'mytopic', fromBeginning: true });
     await consumer.subscribe({ topic: 'ProductViewedCountsTopic', fromBeginning: true });
     await consumer.subscribe({ topic: 'ProductPurchasedCountsTopic', fromBeginning: true });
-    //await consumer.subscribe({ topic: 'ProductFavoritedCountsTopic', fromBeginning: true });
+    await consumer.subscribe({ topic: 'ProductFavoritedCountsTopic', fromBeginning: true });
     
   
     await consumer.run({
